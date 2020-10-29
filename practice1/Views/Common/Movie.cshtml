@@ -1,0 +1,26 @@
+﻿@model IEnumerable<practice1.Models.Customer>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Movie</title>
+</head>
+<body>
+    <div> 
+        @foreach (var n in @Model)
+        {
+            if (@n.CustMovieID == @ViewBag.ID)
+            {
+                @n.CustName
+                @n.CustMovieID
+            }
+
+        }
+    </div>
+</body>
+</html>
